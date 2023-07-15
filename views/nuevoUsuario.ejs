@@ -1,0 +1,57 @@
+<%- include("templates/encabezado") %>
+<%- include("templates/menu") %>
+<style>
+    h1 {
+        color: black;
+        font-size: 24px;
+        text-align: center;
+    }
+    form {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    div {
+        margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+    }
+
+    span {
+        color: red;
+        font-size: 12px;
+    }
+    button[type="submit"] {
+        background-color: green;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<h1>Nuevo usuario</h1>
+<form action="/capturarUsuario" method="post" id="formulario">
+    <div>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" autofocus>
+        <span id="mensajeNombre"></span>
+    </div>
+    <div>
+        <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+        <span id="mensajeNombre"></span>
+    </div>
+    <div>
+        <input type="password" name="password" id="password" placeholder="Contraseña">
+        <span id="mensajeNombre"></span>
+    </div>
+    <div>
+        <button type="submit">Guardar usuario</button>
+    </div>
+</form>
+
+<%- include("templates/pie") %>
